@@ -1,0 +1,28 @@
+
+<ul class="nav text-white fixed-top" style="    background: rgba(56, 56, 56, 0.753);
+">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Sobre</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Quem somos?</a>
+  </li>
+
+
+
+
+<div class="btn-group" *ngIf="isLogin==false">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Conta
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Exibir Conta</a>
+    <a class="dropdown-item" href="#">Alterar Conta</a>
+    
+  </div>
+</div>
+  <ul *ngIf="isLogin==false" class="navbar-nav ml-auto">
+  <button type="button" class="btn btn-danger">Logout</button>
+ </ul>
+
+  </ul>

@@ -1,0 +1,52 @@
+
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center" id="pwd-container">
+      <div class="col-lg-4 col-sm-1"></div>  
+      <div class="col-lg-4 col-sm-10 text-center mt-5 ">
+        <div class="card bg-dark text-light" style="width:30 rem;">
+        <div class="card-body" >
+          <img src="../../assets/img/logo.jpeg" width="250" height="150" alt="">
+          <div  *ngIf="escopo!='login'" class="form-group">
+        <label for="email_campo">Email</label>
+        <input type="email" class="form-control" id="email_campo"  aria-describedby="emailHelp" placeholder="umNomeUsuario@meuEndereco.com">
+      </div>
+     
+      
+      
+      
+      <div class="form-group">
+        <label for="exampleInputPassword1">Nome de usuário</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Exemplo: pamelinha10, marlovi">
+      </div>
+      <div *ngIf="escopo!='login'"  class="form-group">
+        <label for="exampleInputPassword1">Tipo de conta  </label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="usuário padrão" readonly>
+      </div>
+      
+      <div class="form-group">
+          <label for="exampleInputPassword1">Senha</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+        </div>
+      
+      <button *ngIf="escopo!='login'"  type="submit" class="btn btn-success  btn-lg btn-block">Cadastrar</button>
+      
+      <button  routerLink="/home" type="submit" class="btn btn-primary  btn-lg btn-block">Logar</button>
+      
+      <button  *ngIf="escopo=='login'"  routerLink="/cadastroUsuario" type="button" class="btn btn-outline-success btn-lg btn-block mt-5">Cadastrar-se</button>
+
+        
+
+
+    </div>
+  </div>
+</div>
+<div class="col-lg-4 col-sm-1"></div>  
+
+</div>
+<p>
+<br>
+<br>
+</p>
+</div>
