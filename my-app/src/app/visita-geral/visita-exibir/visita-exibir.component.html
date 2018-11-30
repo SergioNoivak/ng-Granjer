@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th *ngFor="let linha of linhasDoCrud">{{linha}}</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let visita of visitas">
+          <td></td>
+          <td>{{visita.nomeVisitante}}</td>
+          <td>{{visita.motivo}}</td>
+          <td>{{visita.dataVisita}}</td>
+          <td>{{visita.horarioInicio}}</td>
+          <td>{{visita.horarioFim}}</td>
+          <td>{{visita.ultimoLocal}}</td>
+          <td>{{visita.ultimoHorarioContato}}</td>
+          <td>{{visita.empresaInstituicao}}</td>
+      </tr>
+
+    </tbody>
+  </table>

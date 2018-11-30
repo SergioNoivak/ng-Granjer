@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th *ngFor="let linha of linhasDoCrud">{{linha}}</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vacina of vacinas">
+          <td> </td>
+        
+        <td> {{vacina.nome}}</td>
+        <td> {{vacina.fornecedor}}</td>
+        
+      </tr>
+     
+    </tbody>
+  </table>

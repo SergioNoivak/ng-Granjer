@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th *ngFor="let linha of linhasDoCrud">{{linha}}</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let inspecao of inspecoes">
+        <td></td>
+        <td>{{inspecao.id_matriz}}</td>
+        <td>{{inspecao.motivo}}</td>
+        <td>{{inspecao.procedimento}}</td>
+        <td>{{inspecao.dataDaInspecao}}</td>
+        <td>{{inspecao.hora}}</td>
+        <td>{{inspecao.nomeInterventor}}</td>
+      
+      </tr>
+      
+     
+    </tbody>
+  </table>

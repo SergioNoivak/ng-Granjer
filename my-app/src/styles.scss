@@ -1,17 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
 body{
 
-
-    margin:0; 
-}
-
-
-.fundo {
-	background: url(assets/img/farm.jpg) no-repeat center center ;
-     
-    
+    background-image: url(assets/img/farm2.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+.opacidade{
+
+
+    background-color: rgba(0, 0, 0, 0.493);
+
+
+
+
 }

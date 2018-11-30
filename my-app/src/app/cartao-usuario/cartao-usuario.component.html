@@ -10,7 +10,7 @@
           <img src="../../assets/img/logo.jpeg" width="250" height="150" alt="">
           <div  *ngIf="escopo!='login'" class="form-group">
         <label for="email_campo">Email</label>
-        <input type="email" class="form-control" id="email_campo"  aria-describedby="emailHelp" placeholder="umNomeUsuario@meuEndereco.com">
+        <input  [(ngModel)]="email" type="email" class="form-control" id="email_campo"  aria-describedby="emailHelp" placeholder="umNomeUsuario@meuEndereco.com">
       </div>
      
       
@@ -18,25 +18,25 @@
       
       <div class="form-group">
         <label for="exampleInputPassword1">Nome de usuário</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Exemplo: pamelinha10, marlovi">
+        <input  [(ngModel)]="nomeUsuario" type="text" class="form-control" id="exampleInputPassword1" placeholder="Exemplo: pamelinha10, marlovi">
       </div>
       <div *ngIf="escopo!='login'"  class="form-group">
         <label for="exampleInputPassword1">Tipo de conta  </label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="usuário padrão" readonly>
+        <input  [(ngModel)]="tipoConta" type="text" readonly class="form-control" id="exampleInputPassword1" placeholder="usuário padrão" >
       </div>
       
       <div class="form-group">
           <label for="exampleInputPassword1">Senha</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+          <input  [(ngModel)]="senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
         </div>
       
-      <button *ngIf="escopo!='login'"  type="submit" class="btn btn-success  btn-lg btn-block">Cadastrar</button>
+      <button *ngIf="escopo!='login' && escopo=='exibir-conta'"  type="submit" class="btn btn-success  btn-lg btn-block">Cadastrar</button>
       
-      <button  routerLink="/home" type="submit" class="btn btn-primary  btn-lg btn-block">Logar</button>
+      <button *ngIf="escopo=='login'&& escopo!='exibir-conta'" routerLink="/home" type="submit" class="btn btn-primary  btn-lg btn-block">Logar</button>
       
       <button  *ngIf="escopo=='login'"  routerLink="/cadastroUsuario" type="button" class="btn btn-outline-success btn-lg btn-block mt-5">Cadastrar-se</button>
 
-        
+      <button  *ngIf="escopo=='cadastroUsuario'" (click)="clicouCadastrarUsuario()" type="button" class="btn btn-success btn-lg btn-block mt-5">Cadastrar-se</button>
 
 
     </div>

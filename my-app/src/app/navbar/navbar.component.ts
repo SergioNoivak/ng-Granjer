@@ -7,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  @Input('Login')
-  isLogin:boolean;
+  @Input('escopo')
+  escopo:string;
 
   
   constructor() { }

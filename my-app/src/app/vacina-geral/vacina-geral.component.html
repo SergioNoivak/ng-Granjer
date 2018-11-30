@@ -1,0 +1,80 @@
+
+  <app-navbar escopo='home'></app-navbar>
+
+  <div class="fundo ">
+  
+      <nav class="navbar navbar-expand-lg  bg-dark text-center  ">
+
+            <div class="col-3"></div>
+            <div class="col-6">
+
+            
+
+
+<app-botao-crud (eventoMudancaDeAba) = "alterarAba($event)"></app-botao-crud>
+
+
+            
+            
+            </div>
+
+            
+            <div class="col-3"></div>
+            
+          </nav>
+          
+          <div>
+
+           
+
+            <div class="card background-opacity" >
+              
+              
+
+              
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-2"> </div>
+                  <div class="col-lg-8" style="">
+                    
+                    <app-cartao-home  urlDaImagem="../../assets/img/vacina.png" titulo="Vacinas"></app-cartao-home>
+                    
+                    
+                    
+                  </div>
+
+                  <div class="col-lg-2"> </div>
+                  
+                </div>
+                  
+
+                <div class="row">
+                  
+                  
+                  <div class="col-lg-2"></div>
+                  <div class="col-lg-8">
+
+                   
+                    <div [ngSwitch]="opcaoDoCRUD">
+                      <app-vacina-cadastrar *ngSwitchCase="'Cadastrar'"></app-vacina-cadastrar>
+                      <app-vacina-exibir *ngSwitchCase="'Exibir'"></app-vacina-exibir>
+                      <app-vacina-buscar *ngSwitchCase="'Busca'"></app-vacina-buscar>
+
+                    </div>
+
+
+                  </div>
+                  <div class="col-lg-2"></div>
+                  
+            </div>
+              
+
+
+            </div>
+            
+          </div>
+
+    </div>
+    
+      
+  </div>

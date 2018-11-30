@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InicioService } from '../inicio.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +8,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  retorno;
+
+  constructor( private inicioService:InicioService) {
+
+    console.log("PASSOU")
+     this.inicioService.getAll().subscribe(GET=> this.retorno = GET['resultado']);
+    
+
+   }
+
+   fazerAtualizacao(){
+
+    console.log("iii")
+    this.inicioService.metodo2({"KAkakaak":"ajajajaajaj"});
+
+
+   }
+
+   getThis(){
+
+    return this.retorno;
+
+
+   }
 
   ngOnInit() {
+
   }
+
+  ngAfterViewInit(){
+
+ 
+
+  }	
+
 
 }

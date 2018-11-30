@@ -1,4 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Usuario } from 'model/Usuario';
+
+
+
 
 @Component({
   selector: 'app-cartao-usuario',
@@ -13,8 +17,31 @@ export class CartaoUsuarioComponent implements OnInit {
     escopo:string;
 
 
-  constructor() { }
+  @Output()
+  clicouCadastrar=new EventEmitter ();
 
+
+  public email:string="";
+  public nomeUsuario:string="";
+  public tipoConta:string="";
+  public senha:string="";
+
+
+
+  constructor() {
+
+
+    
+   }
+
+
+  clicouCadastrarUsuario(){
+
+    let usuario:Usuario = new Usuario(this.email,this.nomeUsuario,this.tipoConta,this.senha);
+    this.clicouCadastrar.emit({"usuario":usuario});
+  }
+
+ 
   ngOnInit() {
   }
 

@@ -1,28 +1,36 @@
 
-<ul class="nav text-white fixed-top" style="    background: rgba(56, 56, 56, 0.753);
-">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Sobre</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Quem somos?</a>
-  </li>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark  ">
 
+    <a class="navbar-brand text-white" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active text-white" href="#">Sobre <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link text-white" href="#">Quem somos?</a>
 
-
-
-<div class="btn-group" *ngIf="isLogin==false">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Conta
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Exibir Conta</a>
-    <a class="dropdown-item" href="#">Alterar Conta</a>
+        <div class="btn-group " *ngIf="escopo!='login'">
+            <button type="button" class="btn  btn-primary dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Conta
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item " href="">Exibir Conta</a>
+              <a class="dropdown-item " href="./cadastroUsuario">Alterar Conta</a>
+              
+            </div>
+          </div>
+          
+          <ul *ngIf="escopo!='login'"class="navbar-nav ml-auto">
+              <button routerLink="/home" type="button" class="btn btn-Secondary btn-sm">Home</button>
+            
+            <button routerLink='/' type="button" class="btn btn-danger btn-sm">Logout</button>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
     
-  </div>
-</div>
-  <ul *ngIf="isLogin==false" class="navbar-nav ml-auto">
-  <button type="button" class="btn btn-danger">Logout</button>
- </ul>
+    
+    
 
-  </ul>

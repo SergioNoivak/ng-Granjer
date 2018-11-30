@@ -1,0 +1,26 @@
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select [(ngModel)]="id_matriz" class="form-control" id="exampleFormControlSelect1">
+        <option *ngFor="let matriz of matrizes"  [value]="matriz.id">
+            {{matriz.identificacao}}
+        </option>
+    </select>
+  </div>
+              <label for="validationCustom02">Motivo</label>
+              <input [(ngModel)]="motivo" type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+              <label for="validationCustom02">Procedimento realizado</label>
+              <input [(ngModel)]="procedimento" type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+              <label for="validationCustom02"> Data</label>
+              <input [(ngModel)]="dataDaInspecao" type="date" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+           
+              <label for="validationCustom02"> Hora</label>
+              <input [(ngModel)]="hora" type="time" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+              <label for="validationCustom02">Nome do interventor</label>
+              <input [(ngModel)]="nomeInterventor" type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+              
+        
+
+              <button (click)="cadastrarInspecao()" type="button" class="btn btn-success btn-lg btn-block mt-4">Cadastrar</button>
+
+          
