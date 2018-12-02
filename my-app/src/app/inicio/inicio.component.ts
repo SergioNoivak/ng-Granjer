@@ -10,21 +10,13 @@ export class InicioComponent implements OnInit {
 
   retorno;
 
-  constructor( private inicioService:InicioService) {
+  constructor( ) {
 
-    console.log("PASSOU")
-     this.inicioService.getAll().subscribe(GET=> this.retorno = GET['resultado']);
+
     
 
    }
 
-   fazerAtualizacao(){
-
-    console.log("iii")
-    this.inicioService.metodo2({"KAkakaak":"ajajajaajaj"});
-
-
-   }
 
    getThis(){
 

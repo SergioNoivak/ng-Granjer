@@ -6,6 +6,7 @@ var RotasMatriz_1 = require("./rotas/matriz/RotasMatriz");
 var RotasInspecao_1 = require("./rotas/inspecao/RotasInspecao");
 var RotasVacina_1 = require("./rotas/vacina/RotasVacina");
 var RotasVisita_1 = require("./rotas/visita/RotasVisita");
+var RotasAutenticacao_1 = require("./rotas/autenticacao/RotasAutenticacao");
 var App = /** @class */ (function () {
     function App() {
         var _this = this;
@@ -25,12 +26,7 @@ var App = /** @class */ (function () {
         RotasInspecao_1.RotasInspecao.init(this.app);
         RotasVacina_1.RotasVacina.init(this.app);
         RotasVisita_1.RotasVisita.init(this.app);
-        this.app.route('/teste').get(function (req, res) {
-            res.send({ name: "Eu vim em paz do servidor" });
-        });
-        this.app.route('/teste').post(function (req, res) {
-            console.log(req.body);
-        });
+        RotasAutenticacao_1.RotasAutenticacao.init(this.app);
     };
     App.prototype.configurarPrivilegios = function () {
         this.app.use(function (req, res, next) {

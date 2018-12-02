@@ -24,7 +24,7 @@
           <ul *ngIf="escopo!='login'"class="navbar-nav ml-auto">
               <button routerLink="/home" type="button" class="btn btn-Secondary btn-sm">Home</button>
             
-            <button routerLink='/' type="button" class="btn btn-danger btn-sm">Logout</button>
+            <button (click)="logOut()" routerLink='/' type="button" class="btn btn-danger btn-sm">Logout</button>
             
           </ul>
         </div>

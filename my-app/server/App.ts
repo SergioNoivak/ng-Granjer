@@ -5,6 +5,7 @@ import { RotasMatriz } from "./rotas/matriz/RotasMatriz";
 import { RotasInspecao } from "./rotas/inspecao/RotasInspecao";
 import { RotasVacina } from './rotas/vacina/RotasVacina';
 import { RotasVisita } from './rotas/visita/RotasVisita';
+import { RotasAutenticacao } from "./rotas/autenticacao/RotasAutenticacao";
 
     class App{
     public app:any;
@@ -30,6 +31,7 @@ import { RotasVisita } from './rotas/visita/RotasVisita';
         RotasInspecao.init(this.app);
         RotasVacina.init(this.app); 
         RotasVisita.init(this.app);
+        RotasAutenticacao.init(this.app);
        
     }
     configurarPrivilegios(){

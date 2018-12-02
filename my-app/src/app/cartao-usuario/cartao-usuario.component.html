@@ -9,6 +9,8 @@
         <div class="card-body" >
           <img src="../../assets/img/logo.jpeg" width="250" height="150" alt="">
           <div  *ngIf="escopo!='login'" class="form-group">
+
+       
         <label for="email_campo">Email</label>
         <input  [(ngModel)]="email" type="email" class="form-control" id="email_campo"  aria-describedby="emailHelp" placeholder="umNomeUsuario@meuEndereco.com">
       </div>
@@ -32,7 +34,7 @@
       
       <button *ngIf="escopo!='login' && escopo=='exibir-conta'"  type="submit" class="btn btn-success  btn-lg btn-block">Cadastrar</button>
       
-      <button *ngIf="escopo=='login'&& escopo!='exibir-conta'" routerLink="/home" type="submit" class="btn btn-primary  btn-lg btn-block">Logar</button>
+      <button (click)="autenticar()" *ngIf="escopo=='login'&& escopo!='exibir-conta'"  type="submit" class="btn btn-primary  btn-lg btn-block">Logar</button>
       
       <button  *ngIf="escopo=='login'"  routerLink="/cadastroUsuario" type="button" class="btn btn-outline-success btn-lg btn-block mt-5">Cadastrar-se</button>
 
